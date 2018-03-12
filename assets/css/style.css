@@ -1,0 +1,30 @@
+body {
+    background-image: url("../images/wood_pattern.png");
+}
+h1 {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold
+    
+}
+h3 {  text-align: center;
+
+
+}
+p {
+    text-align: center;
+    font-weight: bold
+    
+}
+a {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+.panel-title {
+    background-color: lightgray;
+}
+.panel-body {
+    text-align: center;
+    background-color: azure;
+    
+}

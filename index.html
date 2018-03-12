@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trivia-game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>  
+<script src="assets/javascript/app.js"></script>
+    
+</head>
+<body>
+<div class=row>
+    <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div class="jumbotron">
+                    <h1>You Have <span id="timer">00</span> Left!</h1>
+                    <p>Hurry Up!!!</p>
+            </div>
+        </div> 
+    <div class="col-md-1"></div>
+</div> 
+            <div class=row>
+                    <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <div class=container>
+                                <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                          <h3 class="panel-title">What is the capitol of Denver:</h3>
+                                        </div>
+                                        <div class="panel-body">
+                                                <button type="button" id="win" class="btn btn-primary">Denver</button>
+                                                <button type="button" id="loss" class="btn btn-primary">Colorado Springs</button>
+                                                <button type="button" id="loss" class="btn btn-primary">Pueblo</button>
+                                                <button type="button" id="loss" class="btn btn-primary">Frisco</button>
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+            </div> 
+                <div class="col-md-1"></div>
+            </div>
+            <div class=row>
+                    <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <div class=container>
+                                <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                          <h3 class="panel-title">What is Colorado's highest peak:</h3>
+                                        </div>
+                                        <div class="panel-body">
+                                                <button type="button" id="loss" class="btn btn-primary active">Mt. Evans</button>
+                                                <button type="button" id="loss" class="btn btn-primary active">Pikes Peak</button>
+                                                <button type="button" id="win"  class="btn btn-primary active">Mt. Elbert</button>
+                                                <button type="button" id="loss" class="btn btn-primary active">Mt. Princeton</button>
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+            </div> 
+                <div class="col-md-1"></div>
+            </div>
+            <div class=row>
+                    <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <div class=container>
+                                <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                          <h3 class="panel-title">Colorado neighbors these states except:</h3>
+                                        </div>
+                                        <div class="panel-body">
+                                                <button type="button" id="loss" class="btn btn-primary active">New Mexico</button>
+                                                <button type="button" id="loss" class="btn btn-primary active">Utah</button>
+                                                <button type="button" id="loss" class="btn btn-primary active">Wyoming</button>
+                                                <button type="button" id="win"  class="btn btn-primary active">Arizona</button>
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+            </div> 
+                <div class="col-md-1"></div>
+            </div>
+            <div class=row>
+                    <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <div class=container>
+                                <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                          <h3 class="panel-title">Denver's state capital sits at a elevation of:</h3>
+                                        </div>
+                                        <div class="panel-body">
+                                                <button type="button" id="loss" class="btn btn-primary">0258</button>
+                                                <button type="button" id="loss" class="btn btn-primary">8520</button>
+                                                <button type="button" id="win" class="btn btn-primary">5280</button>
+                                                <button type="button" id="loss" class="btn btn-primary">5028</button>
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+            </div> 
+                <div class="col-md-1"></div>
+            </div>
+            <div class=row>
+                    <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <div class=container>
+                                <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                          <h3 class="panel-title">Colorado's oldest ski resort, Howelsen Hill, opened in what year:</h3>
+                                        </div>
+                                        <div class="panel-body">
+                                                <button type="button" id="loss" class="btn btn-primary">1920</button>
+                                                <button type="button" id="loss" class="btn btn-primary">1898</button>
+                                                <button type="button" id="win"  class="btn btn-primary">1914</button>
+                                                <button type="button" id="loss" class="btn btn-primary">1942</button>
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+            </div> 
+                <div class="col-md-1"></div>
+            </div>  
+            
+            <div class=row>
+                    <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <div class=container>
+                                <div class="panel panel-default">
+                                        <div class="panel-body">
+                                                <a class="btn btn-primary btn-lg" href="done.html" class="btn btn-primary">Submit</a>
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+            </div> 
+                <div class="col-md-1"></div>
+            </div> 
+
+
+
+</body>
+</html>
