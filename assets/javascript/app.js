@@ -40,7 +40,8 @@ var config = {
   var unCounter = 5;
 
     
-$("#win").on("click", function() {
+$("#win").on("click", function(event) {
+        event.preventDefault();
         winCounter++;
         unCounter--;
         console.log("win");
@@ -48,11 +49,12 @@ $("#win").on("click", function() {
   
         //  Store Click Data to Firebase in a JSON property called clickCount
         // Note how we are using the Firebase .set() method
-        database.ref().set({
+        database.ref().push({
           winCount: winCounter
         });
       });
-$("#loss").on("click", function() {
+$("#loss").on("click", function(event) {
+        event.preventDefault();
         lossCounter++;
         unCounter--;
         console.log("loss");
@@ -60,7 +62,7 @@ $("#loss").on("click", function() {
   
         //  Store Click Data to Firebase in a JSON property called clickCount
         // Note how we are using the Firebase .set() method
-        database.ref().set({
+        database.ref().push({
           lossCount: lossCounter
         });
     
